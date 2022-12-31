@@ -11,6 +11,7 @@ tags: ["astro", "blogging", "learning in public"]
 # My First Blog Post
 
 Published on: 21/12/2022
+#####Modified on 31/12/22
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
