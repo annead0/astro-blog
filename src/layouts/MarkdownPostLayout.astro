@@ -1,9 +1,16 @@
 ---
-import '../styles/mdStyles.css'
+import '../styles/mdStyles.css';
+import BaseLayout from './BaseLayout.astro';
 const {frontmatter} =Astro.props;
+const pageTitle="Blog Post";
 ---
+<BaseLayout pageTitle="pageTitle">
 <h1>{frontmatter.title}</h1>
 <p style="text-decoration:underline;">Written by {frontmatter.author}</p>
+<p>Published:{frontmatter.pubDate.slice(0,10)}</p>
+<p><em>{frontmatter.description}</em></p>
+<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt}/>
 <div id="mainblog">
 <slot/>
 </div>
+</BaseLayout>

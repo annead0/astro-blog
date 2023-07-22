@@ -9,5 +9,5 @@ image:
     alt: 'The Astro logo with the word One.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-#### Published: 22/7/23
+
 ##### test
