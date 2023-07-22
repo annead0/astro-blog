@@ -4,7 +4,7 @@ import BaseLayout from './BaseLayout.astro';
 const {frontmatter} =Astro.props;
 const pageTitle="Blog Post";
 ---
-<BaseLayout pageTitle="pageTitle">
+<BaseLayout pageTitle={frontmatter.pageTitle}>
 <h1>{frontmatter.title}</h1>
 <p style="text-decoration:underline;">Written by {frontmatter.author}</p>
 <p>Published:{frontmatter.pubDate.slice(0,10)}</p>
