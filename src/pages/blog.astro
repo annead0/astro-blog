@@ -2,18 +2,17 @@
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+const title = "Blog";
+const pageTitle="Blog";
 ---
 <body>
-    <Navigation/>
+   <BaseLayout title={title} pageTitle={pageTitle}>
     <h1>My Astro Learning Blog</h1>
     <p>This is where I will post about my journey learning Astro.</p>
     <ul>
         <li><a href="https://anneadastroblog.netlify.app/posts/post-1/">My First Post using Astro</a></li>
     </ul>
     <Footer/>
-    <script>
-        document.querySelector('.hamburger').addEventListener('click', () => {
-          document.querySelector('.nav-links').classList.toggle('expanded');
-        });
-      </script>
+  </BaseLayout>
   </body>

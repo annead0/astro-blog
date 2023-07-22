@@ -5,15 +5,15 @@ const identity ={
     firstName:"Maik",
     hobby:"Web Development",
 };
-const skills=["JSX","TSX","HTML","CSS","LESS","Vue","Nuxt","Next.js","Remix.js","Astro.js","RedwoodJS","Koa","Gridsome","Saber","Solid","React","Preact"];
+const skills=["JSX","TSX","HTML","CSS","LESS","Vue","Nuxt","Next.js","Remix.js","Astro.js","RedwoodJS","Gridsome","Saber","Solid","React","Preact"];
 const happy = true;
 const finished = false;
 const goal = 10;
 const skillColour="navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+const title="About";
+const pageTitle ="About";
 ---
 <head>
     <title>{pageTitle}</title>
@@ -31,8 +31,7 @@ import Footer from '../components/Footer.astro';
     </style>
 </head>
 <body>
-    <Navigation/>
-    <h1>{pageTitle}</h1>
+    <BaseLayout title={title} pageTitle={pageTitle}>
     <h2>... and my new Astro site!</h2>
   
     <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
@@ -47,11 +46,6 @@ import Footer from '../components/Footer.astro';
 {finished && <p>I finished this tutorial!</p>}
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-<Footer/>
-<script>
-    document.querySelector('.hamburger').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('expanded');
-    });
-  </script>
+</BaseLayout>
 
   </body>
