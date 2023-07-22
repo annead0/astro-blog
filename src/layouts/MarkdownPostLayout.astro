@@ -1,6 +1,9 @@
 ---
+import '../styles/mdStyles.css'
 const {frontmatter} =Astro.props;
 ---
 <h1>{frontmatter.title}</h1>
 <p>Written by {frontmatter.author}</p>
+<div id="mainblog">
 <slot/>
+</div>

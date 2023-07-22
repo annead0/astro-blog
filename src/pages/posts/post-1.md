@@ -9,7 +9,6 @@ image:
     alt: 'The Astro logo with the word One.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Blog Post
 
 Published on: 21/12/2022
 ##### Modified on 31/12/22
