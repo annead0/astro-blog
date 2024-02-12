@@ -10,4 +10,5 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-# Test
+# Test blog post
+As part of the astro tutorial.

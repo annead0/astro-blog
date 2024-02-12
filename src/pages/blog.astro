@@ -4,15 +4,14 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle="Blog";
+const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 <body>
    <BaseLayout  pageTitle={pageTitle}>
     <h1>My Astro Learning Blog</h1>
     <p>This is where I will post about my journey learning Astro.</p>
     <ul>
-        <li><a href="https://anneadastroblog.netlify.app/posts/post-1/">My First Post using Astro</a></li>
-        <li><a href="https://anneadastroblog.netlify.app/posts/post-2/">My Second Post using Astro</a></li>
+   {allPosts.map((post) => <BlogPost url={post.url}> title={post.frontmatter.title}/>)}
     </ul>
-
   </BaseLayout>
   </body>
