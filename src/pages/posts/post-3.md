@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 pubDate: 2024-02-12
-title: My Third Blog Post
+title: 'My Third Blog Post'
 author: Astro Learner
 description: "This post will show up on its own!"
 image:
