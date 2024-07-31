@@ -22,6 +22,7 @@ const filteredPosts = posts.filter((post) => post.frontmatter.tags?.includes(tag
     </ul>
 
 </BaseLayout>-->
+---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogPost from '../../components/BlogPost.astro'
 
@@ -37,7 +38,7 @@ export async function getStaticPaths() {
         { params: { tag: "learning in public" }, props: { posts: allPosts.filter(post => post.frontmatter.tags.includes("learning in public")) } }
     ];
 }
-
+---
 const filteredPosts = Astro.props.posts;
 
 <BaseLayout>
