@@ -37,7 +37,7 @@ export async function getStaticPaths() {
     {params: {tag: "learning in public"}, props: {posts: allPosts}}
   ];
 }
-
+const filteredPosts = posts.filter((post)=>post.frontmatter.tags?.includes(tags));
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
